@@ -1,0 +1,29 @@
+TASK SUBMISSION CHECKLIST
+
+Task 1:
+GitHub URL for models.py:
+https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/onlinecourse/models.py
+
+Task 2:
+GitHub URL for admin.py:
+https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/onlinecourse/admin.py
+
+Task 3:
+Screenshot filename:
+03-admin-site.png
+
+Task 4:
+GitHub URL for course_details_bootstrap.html:
+https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/onlinecourse/course_details_bootstrap.html
+
+Task 5:
+GitHub URL for views.py:
+https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/onlinecourse/views.py
+
+Task 6:
+GitHub URL for urls.py:
+https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/onlinecourse/urls.py
+
+Task 7:
+Screenshot filename:
+07-final.png

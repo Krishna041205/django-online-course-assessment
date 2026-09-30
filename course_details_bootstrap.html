@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+        <div class="container-fluid py-2">
+            <h1 class="display-5 fw-bold">{{ course.name }}</h1>
+            <p class="lead text-muted">{{ course.description }}</p>
+            {% if course.duration %}
+                <span class="badge bg-primary">{{ course.duration }}</span>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h3">Course Lessons</h2>
+        <span class="badge bg-secondary">{{ course.lessons.count }} lessons</span>
+    </div>
+
+    <div class="row g-4">
+        {% for lesson in course.lessons.all %}
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-dark">Lesson {{ forloop.counter }}</span>
+                        <span class="text-muted small">{{ lesson.questions.count }} questions</span>
+                    </div>
+                    <h3 class="h5 card-title">{{ lesson.title }}</h3>
+                    <p class="card-text text-muted">
+                        {{ lesson.content|truncatewords:30 }}
+                    </p>
+                    <a href="{% url 'onlinecourse:submit' course.id %}"
+                       class="btn btn-outline-primary">
+                        Attempt Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">
+                No lessons have been added to this course yet.
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
